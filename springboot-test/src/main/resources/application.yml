@@ -1,0 +1,20 @@
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.zpy.springboottest.model
+  config-location: classpath:mybatis/mybatis-config.xml
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    hikari:
+      auto-commit: true
+      connection-test-query: SELECT 1
+      connection-timeout: 30000
+      idle-timeout: 30000
+      max-lifetime: 1800000
+      maximum-pool-size: 15
+      minimum-idle: 5
+      pool-name: YIHikariCP
+    password: rootroot
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://localhost:3306/springboottest?useUnicode=true&characterEncoding=utf-8
+    username: root
